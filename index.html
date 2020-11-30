@@ -64,11 +64,14 @@
                         <br>
                 <div class="w-80 m-auto" style="margin-top: 20px;"> <input type="text" name="" id="namevalue"
                         class="form-control text-center"></div>
-
-
+<br>
+                        <div class="w-60 m-auto">
+                            <button class="btn btn-success w-50" onclick="reset()"> Clear</button>
+                        </div>
+                        <br>
                 <div class="card-footer" style="text-align: center; ">Have Fun with Your Love one
                 </div>
-
+ 
             </div>
 
     </header>
@@ -77,6 +80,17 @@
 <script>
     var fnmae;
     var lname;
+
+    function reset() {
+
+document.getElementById('fname').value = '';
+
+document.getElementById('lname').value = '';
+document.getElementById('resultvalue').value = '';
+document.getElementById('namevalue').value = '';
+
+}
+
     function calculate() {
        
        var  fname = document.getElementById('fname').value;
@@ -85,9 +99,9 @@
         console.log('your name is:' + fname);
         console.log('your love name is:' + lname);
 
-        if(fname == undefined && lname == undefined )
+        if(fname == null && lname ==  null)
         {
-            document.getElementById('namevalue').innerHTML = "Bhai Naam daal le"
+            document.getElementById('namevalue').innerHTML  = "Bhai Naam daal le"
         }
        
         else
